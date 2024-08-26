@@ -1,0 +1,232 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Blurred background image */
+.background {
+    position: relative; /* Make it a positioning context */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right top, #557799, #659ba7, #94bbb0, #cbd8c3, #fdf5e6);
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+/* Circular centered image */
+.centered-circle {
+    position: absolute; /* Position it relative to the background */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1; /* Ensure it's above the background */
+}
+
+.centered-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.error-message {
+    color: #FF0000;
+    margin-bottom: 20px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fdf5e6;
+    z-index: 10; /* Ensures the navbar is on top */
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    display: flex;
+    justify-content: center; /* Center aligns the navbar content */
+    align-items: center;
+}
+
+.navbar-brand {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 100px; 
+}
+
+.navbar-brand img {
+    width: 50px; /* Adjust the width according to your logo size */
+    height: auto;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-link {
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 18px;
+}
+
+.nav-link:hover {
+    background-color: #557799;
+    color: white;
+    border-radius: 5px;
+}
+
+section {
+    padding: 40px;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    color:  black;
+    font-size: 50px;
+    text-align: left;
+    font-weight: bold; /* Make the heading bold */
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    color:  white;
+    font-size: 30px;
+    text-align: justify;
+    font-weight: bold; /* Make the heading bold */
+    font-family: Arial, sans-serif;
+}
+
+h3 {
+    color:  white;
+    font-size: 50px;
+    text-align: left;
+    font-weight: bold; /* Make the heading bold */
+    font-family: Arial, sans-serif;
+}
+
+h4 {
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    font-weight: bold; /* Make the heading bold */
+    font-family: Arial, sans-serif;
+}
+
+
+p {
+    /*text-align: center;*/
+    font-family: 'Arial', sans-serif;
+    color: black;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6; /* Increase line spacing for readability */
+    text-align: justify; /* Justify text for a more polished look */
+}
+
+p.special {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 2rem;
+    line-height: 1.6; /* Increase line spacing for readability */
+    text-align: justify; /* Justify text for a more polished look */
+}
+
+
+img {
+    max-width: 100%;
+   /* height: auto;*/
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease; /* Add a transition for smooth hover effect  */
+}
+
+img:hover {
+    transform: scale(1.1); /* Make the image slightly larger on hover 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Increase the box shadow on hover */
+}
+
+.fa-facebook{
+    border-radius: 50%; /* Make the icons circular */
+    padding: 10px; /* Add some padding */
+    background-color: #fdf5e6; /* Optional: Add a background color */
+    text-decoration: none; /* Remove underline from the links */
+    width: 50px;
+    height: 50px;
+  }
+
+  .fa-twitter {
+    border-radius: 50%; /* Make the icons circular */
+    padding: 10px; /* Add some padding */
+    background-color: #fdf5e6; /* Optional: Add a background color */
+    text-decoration: none; /* Remove underline from the links */
+  }
+
+  .fa-instagram{
+    border-radius: 50%; /* Make the icons circular */
+    padding: 10px; /* Add some padding */
+    background-color: #fdf5e6; /* Optional: Add a background color */
+    text-decoration: none; /* Remove underline from the links */
+    width: 50px;
+    height: 50px;
+  }
+
+  .card-block {
+    font-size: 1em;
+    position: relative;
+    margin: 0;
+    padding: 1em;
+    border: none;
+    border-top: 1px solid rgba(34, 36, 38, .1);
+    box-shadow: none;
+}
+
+.card {
+    font-size: 1em;
+    overflow: hidden;
+    padding: 5;
+    border: none;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+    margin-top:20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease; /* Add a transition for smooth hover effect  */
+}
+
+.card:hover {
+    transform: scale(1.1); /* Make the image slightly larger on hover 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Increase the box shadow on hover */
+}
+
+ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+
+ul li {
+    margin-bottom: 10px; /* Add space between list items */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-size: 20px;
+
+}
